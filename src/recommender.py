@@ -25,6 +25,23 @@ from src.trajectory import (
 
 CANDIDATE_ACTIONS = tuple(ACTION_EFFECTS)
 
+POLICY_LABELS = {
+    "maintain": "Maintain only",
+    "rule_based": "Rule-based path follower",
+    "predictive": "Predictive recommender",
+}
+
+RULE_THRESHOLDS = {
+    "cross_track_m": 6.0,
+    "large_heading_error_deg": 10.0,
+    "heading_error_deg": 5.0,
+    "speed_above_profile_mps": 0.35,
+    "speed_below_profile_mps": -0.45,
+    "near_berth_radii": 3.0,
+    "near_berth_speed_margin_mps": 0.20,
+    "stabilize_yaw_rate_deg_s": 0.20,
+}
+
 
 @dataclass(frozen=True)
 class ActionScore:
@@ -112,16 +129,60 @@ def recommendation_reason(ranking: pd.DataFrame) -> str:
     )
 
 
+def rule_based_action(
+    state: VesselState,
+    trajectory: pd.DataFrame,
+    berth: dict | pd.Series,
+) -> str:
+    """Choose an action from current errors only, without prediction or look-ahead.
+
+    Positive cross-track error is port/left of the path, so it requires a
+    starboard correction. Positive heading error is clockwise/starboard of the
+    desired heading, so it requires a port correction.
+    """
+    nearest = nearest_trajectory_point(state.x, state.y, trajectory)
+    cross_track_error = calculate_cross_track_error(state.x, state.y, trajectory)
+    heading_error = calculate_heading_error(
+        state.heading_deg, float(nearest["desired_heading_deg"])
+    )
+    speed_error = state.speed_mps - float(nearest["desired_speed_mps"])
+    distance_to_berth = calculate_distance_to_berth(state.x, state.y, berth)
+    near_berth = (
+        distance_to_berth
+        <= RULE_THRESHOLDS["near_berth_radii"] * float(berth["approach_zone_radius_m"])
+    )
+
+    if abs(heading_error) > RULE_THRESHOLDS["large_heading_error_deg"]:
+        return "CORRECT_PORT" if heading_error > 0.0 else "CORRECT_STARBOARD"
+    if abs(cross_track_error) > RULE_THRESHOLDS["cross_track_m"]:
+        return "CORRECT_STARBOARD" if cross_track_error > 0.0 else "CORRECT_PORT"
+    if near_berth and speed_error > RULE_THRESHOLDS["near_berth_speed_margin_mps"]:
+        return "REDUCE_SPEED"
+    if speed_error > RULE_THRESHOLDS["speed_above_profile_mps"]:
+        return "REDUCE_SPEED"
+    if not near_berth and speed_error < RULE_THRESHOLDS["speed_below_profile_mps"]:
+        return "INCREASE_SPEED"
+    if abs(heading_error) > RULE_THRESHOLDS["heading_error_deg"]:
+        return "CORRECT_PORT" if heading_error > 0.0 else "CORRECT_STARBOARD"
+    if near_berth and abs(state.yaw_rate_deg_s) > RULE_THRESHOLDS["stabilize_yaw_rate_deg_s"]:
+        return "STABILIZE"
+    return "MAINTAIN"
+
+
 def run_closed_loop(
     scenario: str,
     trajectory: pd.DataFrame,
     berth: dict | pd.Series,
-    use_recommendations: bool,
+    policy: str | bool,
     seed: int = 42,
     max_steps: int = 150,
     initial_state: VesselState | None = None,
 ) -> pd.DataFrame:
-    """Run one advisory or maintain-only trajectory with identical disturbances."""
+    """Run one control policy with deterministic, policy-independent disturbances."""
+    if isinstance(policy, bool):
+        policy = "predictive" if policy else "maintain"
+    if policy not in POLICY_LABELS:
+        raise ValueError(f"Unknown policy: {policy}")
     if initial_state is None:
         first = trajectory.iloc[0]
         initial_state = VesselState(
@@ -141,16 +202,19 @@ def run_closed_loop(
         cte = calculate_cross_track_error(state.x, state.y, trajectory)
         heading_error = calculate_heading_error(state.heading_deg, float(nearest["desired_heading_deg"]))
         distance = calculate_distance_to_berth(state.x, state.y, berth)
-        if use_recommendations:
+        if policy == "predictive":
             action, ranking = recommend_action(state, env, trajectory, berth, previous_action)
             action_cost = float(ranking.iloc[0]["cost"])
+        elif policy == "rule_based":
+            action = rule_based_action(state, trajectory, berth)
+            action_cost = np.nan
         else:
             action, action_cost = "MAINTAIN", np.nan
         records.append(
             {
                 "timestamp_s": step * DT_SECONDS,
                 "scenario": scenario,
-                "controller": "Recommendation loop" if use_recommendations else "No correction",
+                "controller": POLICY_LABELS[policy],
                 "x_position_m": state.x,
                 "y_position_m": state.y,
                 "heading_deg": state.heading_deg,

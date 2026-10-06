@@ -3,7 +3,7 @@
 **Trajectory Prediction • Deviation Detection • Closed-Loop Recommendation**
 
 > [!CAUTION]
-> This is a deterministic **synthetic simulation and research case study**. It is not certified navigation software, is not safe for controlling a vessel, and does not issue autonomous ship commands. A human pilot or bridge operator retains authority.
+> This is a deterministic **synthetic simulation and research case study**. Its prediction errors are not real-world vessel-navigation accuracy. It is not certified navigation software, is not safe for controlling a vessel, and does not issue autonomous ship commands. A human pilot or bridge operator retains authority.
 
 ## Operational problem
 
@@ -11,12 +11,18 @@ The berth is preassigned. The problem is not *which berth should the vessel use?
 
 > How can a vessel follow a planned final-approach trajectory while wind, current, motion, and accumulated deviation change over time?
 
-The system repeats a simple feedback loop until the vessel enters the fixed berth's 45 m final approach zone or the simulation timeout is reached:
+The experiment uses the same fixed berth, nominal path, starting state, disturbances, timestep, and stopping rule for three progressively stronger policies:
 
 ```text
-FIXED BERTH → PLAN → OBSERVE → PREDICT → COMPARE → DETECT DEVIATION
-                  ↑                                      ↓
-                  └──────── MOVE ← RECOMMEND CORRECTION ─┘
+PLANNED TRAJECTORY
+        ↓
+CURRENT STATE + ENVIRONMENT
+        ↓
+MAINTAIN ONLY  vs  RULE-BASED PATH FOLLOWER  vs  PREDICTIVE RECOMMENDER
+
+Predictive loop: OBSERVE → PREDICT → COMPARE → EVALUATE ACTIONS
+                         ↑                         ↓
+                         └────── MOVE ← RECOMMEND ─┘
 ```
 
 | Component | Question |
@@ -24,6 +30,7 @@ FIXED BERTH → PLAN → OBSERVE → PREDICT → COMPARE → DETECT DEVIATION
 | Planner | What trajectory should we follow? |
 | Predictor | Where will the vessel be after the next 2-second step? |
 | Deviation detector | Are we moving away from the planned path? |
+| Reactive controller | What correction follows from the current error? |
 | Recommender | Which abstract correction is expected to bring us closer? |
 | Human operator | Should I accept or override the recommendation? |
 
@@ -35,7 +42,7 @@ FIXED BERTH → PLAN → OBSERVE → PREDICT → COMPARE → DETECT DEVIATION
 - A temporal next-state experiment comparing a kinematic baseline with a residual gradient-boosting model.
 - Cross-track, heading, speed, distance-to-berth, and deviation-state calculations.
 - Six advisory actions ranked with a six-step short-horizon cost.
-- Executed maintain-only and recommendation-loop simulations under identical disturbance sequences.
+- Executed maintain-only, reactive rule-based, and predictive simulations under identical disturbance sequences.
 
 ## Synthetic dataset
 
@@ -58,7 +65,9 @@ The first 27 complete trajectories train the model and the final 9 trajectories 
 | Median Euclidean error | 0.9439 m | 0.0719 m |
 | 95th-percentile error | 1.5665 m | 0.1569 m |
 
-The selected model is a `HistGradientBoostingRegressor` wrapped for two outputs. It learns residual displacement beyond the kinematic estimate from vessel state, environment, trajectory context, and abstract action fields. These metrics measure fit to this simulator only—not real-vessel accuracy.
+The selected model is a `HistGradientBoostingRegressor` wrapped for two outputs. It learns residual displacement beyond the kinematic estimate from vessel state, environment, trajectory context, and abstract action fields.
+
+These unusually small errors are obtained on deterministic synthetic simulator data and **must not be interpreted as real-world vessel-navigation accuracy**. Real systems include sensor uncertainty, GPS/AIS errors, vessel-specific hydrodynamics, actuator delays, harbor geometry, measurement noise, and changing environmental forecasts. The purpose is to demonstrate architecture and methodology—not certified navigation performance.
 
 ![Held-out next-state prediction](assets/vessel_next_position_prediction.png)
 
@@ -91,22 +100,37 @@ For the notebook's crosswind example at `(x=-455 m, y=-52 m, heading=68°, speed
 
 The output is “recommend `CORRECT_STARBOARD`,” not a helm command.
 
+### Three policy levels
+
+- **Maintain only — no active control.** Demonstrates how the vessel drifts without correction.
+- **Rule-based path follower — reactive feedback.** Uses only current cross-track, heading, speed, and berth-distance errors. It corrects heading above 10°, cross-track error above 6 m, speed above profile by 0.35 m/s (0.20 m/s near the berth), and low speed below profile by 0.45 m/s when not near the berth. It has no predictor or look-ahead.
+- **Predictive recommender — anticipatory decision support.** Rolls every candidate action through six future simulator steps and recommends the lowest-cost result.
+
 ## Closed-loop results
 
-The table contains actual executed simulation results using seed `84`. Both policies receive the same environment and per-step noise. “No correction” applies `MAINTAIN` only; the advisory loop executes its top-ranked abstract action.
+The table contains actual executed simulation results using seed `84`. All three policies receive the same starting state, environment sequence, and per-step noise. Thresholds are fixed across scenarios.
 
-| Scenario | Policy | Mean |CTE| | p95 |CTE| | Final berth error | Time to zone | Corrections | Reached zone |
-|---|---|---:|---:|---:|---:|---:|:---:|
-| Calm | No correction | 108.05 m | 319.36 m | 619.33 m | — | 0 | No |
-| Calm | Recommendation loop | 0.86 m | 1.87 m | 44.55 m | 258 s | 63 | Yes |
-| Crosswind | No correction | 169.40 m | 440.24 m | 695.36 m | — | 0 | No |
-| Crosswind | Recommendation loop | 1.17 m | 1.84 m | 40.90 m | 208 s | 32 | Yes |
-| Changing wind + current | No correction | 198.93 m | 493.28 m | 698.21 m | — | 0 | No |
-| Changing wind + current | Recommendation loop | 1.00 m | 2.02 m | 39.88 m | 210 s | 33 | Yes |
+| Scenario | Policy | Mean \|CTE\| | p95 \|CTE\| | Max \|CTE\| | Final error | Final heading | Time to zone | Corrections | Reached |
+|---|---|---:|---:|---:|---:|---:|---:|---:|:---:|
+| Calm | Maintain only | 108.05 m | 319.36 m | 347.99 m | 619.33 m | 28.01° | — | 0 | No |
+| Calm | Rule-based | 2.93 m | 6.75 m | 6.96 m | 43.21 m | 3.71° | 252 s | 50 | Yes |
+| Calm | Predictive | 0.86 m | 1.87 m | 2.13 m | 44.55 m | 3.25° | 258 s | 63 | Yes |
+| Crosswind | Maintain only | 169.40 m | 440.24 m | 474.61 m | 695.36 m | 28.01° | — | 0 | No |
+| Crosswind | Rule-based | 6.53 m | 10.35 m | 11.03 m | 42.65 m | 3.32° | 206 s | 77 | Yes |
+| Crosswind | Predictive | 1.17 m | 1.84 m | 1.97 m | 40.90 m | 3.68° | 208 s | 32 | Yes |
+| Changing wind + current | Maintain only | 198.93 m | 493.28 m | 530.73 m | 698.21 m | 28.01° | — | 0 | No |
+| Changing wind + current | Rule-based | 9.27 m | 15.68 m | 16.41 m | 41.65 m | 3.73° | 202 s | 94 | Yes |
+| Changing wind + current | Predictive | 1.00 m | 2.02 m | 2.28 m | 39.88 m | 3.72° | 210 s | 33 | Yes |
 
-![Planned, uncontrolled, and recommendation-loop trajectories](assets/trajectory_tracking_comparison.png)
+The rule-based follower is a credible baseline: it reaches the zone in all three scenarios and is 2–8 seconds faster than predictive control. In calm conditions it also uses fewer corrections and finishes 1.34 m closer to the berth. Predictive look-ahead adds its clearest value under disturbance: p95 cross-track error falls from 10.35 m to 1.84 m in crosswind and from 15.68 m to 2.02 m in changing wind/current, while corrections fall from 77 to 32 and from 94 to 33. The predictive benefit is therefore tighter, less intervention-heavy tracking—not universally faster arrival.
+
+![Planned, maintain-only, rule-based, and predictive trajectories](assets/trajectory_tracking_comparison.png)
 
 Supporting figures: [cross-track error over time](assets/cross_track_error_over_time.png) and [three-scenario comparison](assets/scenario_comparison.png).
+
+## 60-second interview story
+
+The berth was already assigned, so this was a trajectory-tracking problem. I built a nominal path and estimated vessel motion under changing wind and current. I then compared three policies under identical disturbances. `MAINTAIN` is the no-control baseline. A transparent rule-based follower reacts to current cross-track, heading, and speed errors. The predictive recommender goes further: it forecasts the short-horizon consequences of every candidate action and recommends the lowest-cost one. The reactive controller reached the zone in all scenarios, proving that simple feedback is useful. Predictive look-ahead produced much tighter tail-error control and required far fewer corrections under wind and current, although the reactive controller arrived slightly faster. This isolates the value of anticipation beyond current-error feedback. Every action remains advisory and subject to human approval.
 
 ## Human in the loop
 
@@ -114,10 +138,11 @@ The recommender is advisory. In a real operation, certified navigation systems, 
 
 ## Limitations and failure modes
 
-- State-estimation errors can corrupt the observed position and motion.
-- Wind/current estimates can be wrong or stale.
-- The predictor can fail under unseen vessels or conditions.
-- The simple action simulator does not represent full vessel dynamics.
+- State-estimation, GPS, and AIS errors can corrupt the observed position and motion.
+- Wind/current forecasts can be wrong, stale, or change between updates.
+- The predictor can fail under unseen vessels, harbor geometry, or conditions.
+- The simple action simulator omits vessel-specific hydrodynamics and actuator delays.
+- Synthetic measurement and process noise are less complex than real sensor noise.
 - Latency can make an otherwise reasonable recommendation operationally useless.
 - The nominal trajectory itself may become inappropriate.
 
