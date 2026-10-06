@@ -5,6 +5,20 @@
 > [!CAUTION]
 > This is a deterministic **synthetic simulation and research case study**. Its prediction errors are not real-world vessel-navigation accuracy. It is not certified navigation software, is not safe for controlling a vessel, and does not issue autonomous ship commands. A human pilot or bridge operator retains authority.
 
+## Visual walkthrough
+
+Start with the overview, then follow the implementation and technical views for more detail.
+
+![Project workflow overview](assets/workflows/01_overview.png)
+
+| View | What it explains |
+|---|---|
+| [01 · Overview](assets/workflows/01_overview.png) | The problem, workflow and decision it supports |
+| [02 · Implementation](assets/workflows/02_implementation.png) | How the files and notebooks produce the outputs |
+| [03 · Technical](assets/workflows/03_technical.png) | Evaluation boundaries, algorithms and decision rules |
+
+[Three-page visual walkthrough (PDF)](assets/workflows/workflow_figures.pdf) · [All figures, sources and reading notes](docs/workflow_figures.md)
+
 ## Operational problem
 
 The berth is preassigned. The problem is not *which berth should the vessel use?* It is:

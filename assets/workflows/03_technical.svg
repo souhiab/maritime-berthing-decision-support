@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="1152pt" height="720pt" viewBox="0 0 1152 720" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-10-06T17:59:29.487279</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.10.8, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 720 
+L 1152 720 
+L 1152 0 
+L 0 0 
+z
+" style="fill: #fbfaf7"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 370.642852 270.72 
+Q 394.562189 270.72 417.139885 270.72 
+" clip-path="url(#p8ce0e8aaa3)" style="fill: none; stroke: #326a9c; stroke-width: 1.2; stroke-linecap: round"/>
+    <path d="M 412.339885 268.32 
+L 417.139885 270.72 
+L 412.339885 273.12 
+z
+" clip-path="url(#p8ce0e8aaa3)" style="fill: #326a9c; stroke: #326a9c; stroke-width: 1.2; stroke-linecap: round"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 733.522852 270.72 
+Q 757.442189 270.72 780.019885 270.72 
+" clip-path="url(#p8ce0e8aaa3)" style="fill: none; stroke: #326a9c; stroke-width: 1.2; stroke-linecap: round"/>
+    <path d="M 775.219885 268.32 
+L 780.019885 270.72 
+L 775.219885 273.12 
+z
+" clip-path="url(#p8ce0e8aaa3)" style="fill: #326a9c; stroke: #326a9c; stroke-width: 1.2; stroke-linecap: round"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 938.88 347.600391 
+Q 938.88 374.4008 938.88 399.85957 
+" clip-path="url(#p8ce0e8aaa3)" style="fill: none; stroke: #326a9c; stroke-width: 1.2; stroke-linecap: round"/>
+    <path d="M 941.28 395.05957 
+L 938.88 399.85957 
+L 936.48 395.05957 
+z
+" clip-path="url(#p8ce0e8aaa3)" style="fill: #326a9c; stroke: #326a9c; stroke-width: 1.2; stroke-linecap: round"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 781.357148 478.08 
+Q 757.437811 478.08 734.860115 478.08 
+" clip-path="url(#p8ce0e8aaa3)" style="fill: none; stroke: #326a9c; stroke-width: 1.2; stroke-linecap: round"/>
+    <path d="M 739.660115 480.48 
+L 734.860115 478.08 
+L 739.660115 475.68 
+z
+" clip-path="url(#p8ce0e8aaa3)" style="fill: #326a9c; stroke: #326a9c; stroke-width: 1.2; stroke-linecap: round"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 418.477148 478.08 
+Q 394.557811 478.08 371.980115 478.08 
+" clip-path="url(#p8ce0e8aaa3)" style="fill: none; stroke: #326a9c; stroke-width: 1.2; stroke-linecap: round"/>
+    <path d="M 376.780115 480.48 
+L 371.980115 478.08 
+L 376.780115 475.68 
+z
+" clip-path="url(#p8ce0e8aaa3)" style="fill: #326a9c; stroke: #326a9c; stroke-width: 1.2; stroke-linecap: round"/>
+   </g>
+   <g id="patch_7">
+    <path d="M 213.12 401.199609 
+Q 213.12 374.3992 213.12 348.94043 
+" clip-path="url(#p8ce0e8aaa3)" style="fill: none; stroke: #326a9c; stroke-width: 1.2; stroke-linecap: round"/>
+    <path d="M 210.72 353.74043 
+L 213.12 348.94043 
+L 215.52 353.74043 
+z
+" clip-path="url(#p8ce0e8aaa3)" style="fill: #326a9c; stroke: #326a9c; stroke-width: 1.2; stroke-linecap: round"/>
+   </g>
+   <g id="line2d_1">
+    <path d="M 57.6 36.288 
+L 92.16 36.288 
+" clip-path="url(#p8ce0e8aaa3)" style="fill: none; stroke: #326a9c; stroke-width: 3.5; stroke-linecap: round"/>
+   </g>
+   <g id="line2d_2">
+    <path d="M 57.6 162.432 
+L 1094.4 162.432 
+" clip-path="url(#p8ce0e8aaa3)" style="fill: none; stroke: #d9e1e5; stroke-width: 0.8; stroke-linecap: square"/>
+   </g>
+   <g id="patch_8">
+    <path d="M 66.816 195.84 
+L 359.424 195.84 
+Q 368.64 195.84 368.64 205.056 
+L 368.64 336.384 
+Q 368.64 345.6 359.424 345.6 
+L 66.816 345.6 
+Q 57.6 345.6 57.6 336.384 
+L 57.6 205.056 
+Q 57.6 195.84 66.816 195.84 
+z
+" clip-path="url(#p8ce0e8aaa3)" style="fill: #ffffff; stroke: #d9e1e5; stroke-width: 1.1; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_9">
+    <path d="M 429.696 195.84 
+L 722.304 195.84 
+Q 731.52 195.84 731.52 205.056 
+L 731.52 336.384 
+Q 731.52 345.6 722.304 345.6 
+L 429.696 345.6 
+Q 420.48 345.6 420.48 336.384 
+L 420.48 205.056 
+Q 420.48 195.84 429.696 195.84 
+z
+" clip-path="url(#p8ce0e8aaa3)" style="fill: #ffffff; stroke: #d9e1e5; stroke-width: 1.1; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_10">
+    <path d="M 792.576 195.84 
+L 1085.184 195.84 
+Q 1094.4 195.84 1094.4 205.056 
+L 1094.4 336.384 
+Q 1094.4 345.6 1085.184 345.6 
+L 792.576 345.6 
+Q 783.36 345.6 783.36 336.384 
+L 783.36 205.056 
+Q 783.36 195.84 792.576 195.84 
+z
+" clip-path="url(#p8ce0e8aaa3)" style="fill: #ffffff; stroke: #d9e1e5; stroke-width: 1.1; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_11">
+    <path d="M 66.816 403.2 
+L 359.424 403.2 
+Q 368.64 403.2 368.64 412.416 
+L 368.64 543.744 
+Q 368.64 552.96 359.424 552.96 
+L 66.816 552.96 
+Q 57.6 552.96 57.6 543.744 
+L 57.6 412.416 
+Q 57.6 403.2 66.816 403.2 
+z
+" clip-path="url(#p8ce0e8aaa3)" style="fill: #ffffff; stroke: #d9e1e5; stroke-width: 1.1; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_12">
+    <path d="M 429.696 403.2 
+L 722.304 403.2 
+Q 731.52 403.2 731.52 412.416 
+L 731.52 543.744 
+Q 731.52 552.96 722.304 552.96 
+L 429.696 552.96 
+Q 420.48 552.96 420.48 543.744 
+L 420.48 412.416 
+Q 420.48 403.2 429.696 403.2 
+z
+" clip-path="url(#p8ce0e8aaa3)" style="fill: #ffffff; stroke: #d9e1e5; stroke-width: 1.1; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_13">
+    <path d="M 792.576 403.2 
+L 1085.184 403.2 
+Q 1094.4 403.2 1094.4 412.416 
+L 1094.4 543.744 
+Q 1094.4 552.96 1085.184 552.96 
+L 792.576 552.96 
+Q 783.36 552.96 783.36 543.744 
+L 783.36 412.416 
+Q 783.36 403.2 792.576 403.2 
+z
+" clip-path="url(#p8ce0e8aaa3)" style="fill: #ffffff; stroke: #d9e1e5; stroke-width: 1.1; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_14">
+    <path d="M 66.816 577.152 
+L 1085.184 577.152 
+Q 1094.4 577.152 1094.4 586.368 
+L 1094.4 653.184 
+Q 1094.4 662.4 1085.184 662.4 
+L 66.816 662.4 
+Q 57.6 662.4 57.6 653.184 
+L 57.6 586.368 
+Q 57.6 577.152 66.816 577.152 
+z
+" clip-path="url(#p8ce0e8aaa3)" style="fill: #eaf1f7; stroke: #eaf1f7; stroke-width: 1.1; stroke-linejoin: miter"/>
+   </g>
+   <g id="line2d_3">
+    <path d="M 403.2 593.28 
+L 403.2 647.424 
+" clip-path="url(#p8ce0e8aaa3)" style="fill: none; stroke: #d9e1e5; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_4">
+    <path d="M 748.8 593.28 
+L 748.8 647.424 
+" clip-path="url(#p8ce0e8aaa3)" style="fill: none; stroke: #d9e1e5; stroke-linecap: square"/>
+   </g>
+   <g id="text_1">
+    <text style="font-weight: 700; font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #326a9c" x="103.68" y="38.126438" transform="rotate(-0 103.68 38.126438)">MARITIME BERTHING DECISION SUPPORT</text>
+   </g>
+   <g id="text_2">
+    <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #526574" x="1094.4" y="38.126438" transform="rotate(-0 1094.4 38.126438)">03 / TECHNICAL</text>
+   </g>
+   <g id="text_3">
+    <text style="font-weight: 700; font-size: 29px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #152a3b" x="57.6" y="91.155469" transform="rotate(-0 57.6 91.155469)">Rank six actions through a 12-second look-ahead</text>
+   </g>
+   <g id="text_4">
+    <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #526574" x="57.6" y="131.230125" transform="rotate(-0 57.6 131.230125)">score_action() uses the current environment held fixed across six 2-second simulator steps.</text>
+   </g>
+   <g id="text_5">
+    <text style="font-weight: 700; font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #326a9c" x="73.728" y="215.350594" transform="rotate(-0 73.728 215.350594)">INPUT CONTRACT</text>
+   </g>
+   <g id="text_6">
+    <text style="font-weight: 700; font-size: 15.5px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #152a3b" x="73.728" y="242.177578" transform="rotate(-0 73.728 242.177578)">Observed state + path</text>
+   </g>
+   <g id="text_7">
+    <text style="font-size: 11.3px; font-family: 'DejaVu Sans'; fill: #526574" transform="translate(73.728 267.786234)">x/y, heading, speed, yaw</text>
+    <text style="font-size: 11.3px; font-family: 'DejaVu Sans'; fill: #526574" transform="translate(73.728 282.586321)">Wind/current + previous action</text>
+    <text style="font-size: 11.3px; font-family: 'DejaVu Sans'; fill: #526574" transform="translate(73.728 297.386408)">Fixed berth + nominal trajectory</text>
+   </g>
+   <g id="text_8">
+    <text style="font-weight: 700; font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #326a9c" x="436.608" y="215.350594" transform="rotate(-0 436.608 215.350594)">CANDIDATE SET</text>
+   </g>
+   <g id="text_9">
+    <text style="font-weight: 700; font-size: 15.5px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #152a3b" x="436.608" y="242.177578" transform="rotate(-0 436.608 242.177578)">Six advisory actions</text>
+   </g>
+   <g id="text_10">
+    <text style="font-size: 11.3px; font-family: 'DejaVu Sans'; fill: #526574" transform="translate(436.608 267.786234)">Maintain · port · starboard</text>
+    <text style="font-size: 11.3px; font-family: 'DejaVu Sans'; fill: #526574" transform="translate(436.608 282.586321)">Reduce speed · increase speed</text>
+    <text style="font-size: 11.3px; font-family: 'DejaVu Sans'; fill: #526574" transform="translate(436.608 297.386408)">Stabilize</text>
+   </g>
+   <g id="text_11">
+    <text style="font-weight: 700; font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #326a9c" x="799.488" y="215.350594" transform="rotate(-0 799.488 215.350594)">SIMULATOR ROLLOUT</text>
+   </g>
+   <g id="text_12">
+    <text style="font-weight: 700; font-size: 14px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #152a3b" x="799.488" y="241.037812" transform="rotate(-0 799.488 241.037812)">Forecast terminal state</text>
+   </g>
+   <g id="text_13">
+    <text style="font-size: 10.5px; font-family: 'DejaVu Sans'; fill: #526574" transform="translate(799.488 267.178359)">simulate_step() × 6 per action</text>
+    <text style="font-size: 10.5px; font-family: 'DejaVu Sans'; fill: #526574" transform="translate(799.488 281.222684)">Compute CTE, heading, speed</text>
+    <text style="font-size: 10.5px; font-family: 'DejaVu Sans'; fill: #526574" transform="translate(799.488 294.974977)">Progress and action-change penalty</text>
+   </g>
+   <g id="text_14">
+    <text style="font-weight: 700; font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #326a9c" x="73.728" y="422.710594" transform="rotate(-0 73.728 422.710594)">NEXT ITERATION</text>
+   </g>
+   <g id="text_15">
+    <text style="font-weight: 700; font-size: 15.5px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #152a3b" x="73.728" y="449.537578" transform="rotate(-0 73.728 449.537578)">Advance executed state</text>
+   </g>
+   <g id="text_16">
+    <text style="font-size: 10.5px; font-family: 'DejaVu Sans'; fill: #526574" transform="translate(73.728 474.538359)">Apply lowest-cost action in demo</text>
+    <text style="font-size: 10.5px; font-family: 'DejaVu Sans'; fill: #526574" transform="translate(73.728 488.290652)">Add shared per-step process noise</text>
+    <text style="font-size: 10.5px; font-family: 'DejaVu Sans'; fill: #526574" transform="translate(73.728 502.042945)">Stop at approach-zone radius</text>
+   </g>
+   <g id="text_17">
+    <text style="font-weight: 700; font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #326a9c" x="436.608" y="422.710594" transform="rotate(-0 436.608 422.710594)">TRANSPARENT RANKING</text>
+   </g>
+   <g id="text_18">
+    <text style="font-weight: 700; font-size: 15.5px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #152a3b" x="436.608" y="449.537578" transform="rotate(-0 436.608 449.537578)">Choose minimum cost</text>
+   </g>
+   <g id="text_19">
+    <text style="font-size: 10.1px; font-family: 'DejaVu Sans'; fill: #526574" transform="translate(436.608 474.278609)">1.80|CTE| + 0.10|heading error|</text>
+    <text style="font-size: 10.1px; font-family: 'DejaVu Sans'; fill: #526574" transform="translate(436.608 487.851984)">+ 2.20|speed error|</text>
+    <text style="font-size: 10.1px; font-family: 'DejaVu Sans'; fill: #526574" transform="translate(436.608 501.361286)">+ 0.75 lack of progress + change</text>
+   </g>
+   <g id="text_20">
+    <text style="font-weight: 700; font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #326a9c" x="799.488" y="422.710594" transform="rotate(-0 799.488 422.710594)">TERMINAL COST TERMS</text>
+   </g>
+   <g id="text_21">
+    <text style="font-weight: 700; font-size: 14px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #152a3b" x="799.488" y="448.397812" transform="rotate(-0 799.488 448.397812)">Measure candidate error</text>
+   </g>
+   <g id="text_22">
+    <text style="font-size: 10.6px; font-family: 'DejaVu Sans'; fill: #526574" transform="translate(799.488 474.614344)">Nearest point on planned path</text>
+    <text style="font-size: 10.6px; font-family: 'DejaVu Sans'; fill: #526574" transform="translate(799.488 488.497611)">Distance reduction toward berth</text>
+    <text style="font-size: 10.6px; font-family: 'DejaVu Sans'; fill: #526574" transform="translate(799.488 502.380878)">Penalize unnecessary switching</text>
+   </g>
+   <g id="text_23">
+    <text style="font-weight: 700; font-size: 17.5px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #152a3b" x="77.184" y="601.969266" transform="rotate(-0 77.184 601.969266)">2-second updates</text>
+   </g>
+   <g id="text_24">
+    <text style="font-size: 10.2px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #526574" x="77.184" y="629.830406" transform="rotate(-0 77.184 629.830406)">Implemented simulation timestep</text>
+   </g>
+   <g id="text_25">
+    <text style="font-weight: 700; font-size: 17.5px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #152a3b" x="422.784" y="601.969266" transform="rotate(-0 422.784 601.969266)">Seed 84 / noise 10084</text>
+   </g>
+   <g id="text_26">
+    <text style="font-size: 10.2px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #526574" x="422.784" y="629.830406" transform="rotate(-0 422.784 629.830406)">Shared disturbance sequences</text>
+   </g>
+   <g id="text_27">
+    <text style="font-weight: 700; font-size: 17.5px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #152a3b" x="768.384" y="601.969266" transform="rotate(-0 768.384 601.969266)">Trade-off, not speed win</text>
+   </g>
+   <g id="text_28">
+    <text style="font-size: 10.2px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #526574" x="768.384" y="629.830406" transform="rotate(-0 768.384 629.830406)">Rule baseline arrives 2–8 s sooner</text>
+   </g>
+   <g id="text_29">
+    <text style="font-size: 9.4px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #526574" x="57.6" y="686.822531" transform="rotate(-0 57.6 686.822531)">Source: src/recommender.py. Abstract dynamics and demonstration weights; not certified navigation limits.</text>
+   </g>
+   <g id="text_30">
+    <text style="font-size: 9.4px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #526574" x="1094.4" y="686.822531" transform="rotate(-0 1094.4 686.822531)">MARITIME / 03</text>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p8ce0e8aaa3">
+   <rect x="0" y="0" width="1152" height="720"/>
+  </clipPath>
+ </defs>
+</svg>

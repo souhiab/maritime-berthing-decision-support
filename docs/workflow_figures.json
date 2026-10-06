@@ -1,0 +1,475 @@
+{
+  "name": "Maritime Berthing Decision Support",
+  "short": "MARITIME",
+  "accent": "#326A9C",
+  "tint": "#EAF1F7",
+  "figures": [
+    {
+      "index": 1,
+      "level": "overview",
+      "slug": "01_overview",
+      "title": "Keep an approach trajectory on course",
+      "subtitle": "One fixed berth, a planned path and changing wind/current; recommend an abstract correction.",
+      "cards": [
+        {
+          "rect": [
+            5,
+            21,
+            19,
+            16
+          ],
+          "eyebrow": "01 / OBSERVE",
+          "title": "State + environment",
+          "body": "Position, heading, speed\nWind and current\nCompare with fixed path",
+          "title_size": 13.8,
+          "body_size": 10.7
+        },
+        {
+          "rect": [
+            28.5,
+            21,
+            19,
+            16
+          ],
+          "eyebrow": "02 / LOOK AHEAD",
+          "title": "Predict action\nconsequences",
+          "body": "Roll each action through\n6 simulator steps\n2 seconds per step",
+          "title_size": 14,
+          "body_size": 10.7
+        },
+        {
+          "rect": [
+            52,
+            21,
+            19,
+            16
+          ],
+          "eyebrow": "03 / RANK",
+          "title": "Recommend correction",
+          "body": "Balance path error,\nspeed, progress and\naction changes",
+          "title_size": 12.7
+        },
+        {
+          "rect": [
+            75.5,
+            21,
+            19.5,
+            16
+          ],
+          "eyebrow": "04 / REPEAT",
+          "title": "Advance simulation",
+          "body": "Apply chosen action\nObserve the new state\nRepeat until approach zone",
+          "dark": true,
+          "title_size": 13.3,
+          "body_size": 10.3
+        }
+      ],
+      "edges": [
+        {
+          "points": [
+            [
+              24,
+              29
+            ],
+            [
+              28.5,
+              29
+            ]
+          ]
+        },
+        {
+          "points": [
+            [
+              47.5,
+              29
+            ],
+            [
+              52,
+              29
+            ]
+          ]
+        },
+        {
+          "points": [
+            [
+              71,
+              29
+            ],
+            [
+              75.5,
+              29
+            ]
+          ]
+        },
+        {
+          "points": [
+            [
+              85.25,
+              37
+            ],
+            [
+              85.25,
+              41
+            ],
+            [
+              14.5,
+              41
+            ],
+            [
+              14.5,
+              37
+            ]
+          ],
+          "label": "Updated state feeds the next iteration",
+          "at": [
+            50,
+            40
+          ],
+          "color": "#6C8597"
+        }
+      ],
+      "evidence": [
+        [
+          "Fixed berth",
+          "Trajectory tracking, not berth selection"
+        ],
+        [
+          "6 actions × 6 steps",
+          "Simulator look-ahead ranks advice"
+        ],
+        [
+          "Operator authority",
+          "Accept/override in a real deployment"
+        ]
+      ],
+      "footer": "Synthetic simulation only. The executed loop applies actions automatically for comparison, not real navigation.",
+      "labels": [
+        {
+          "x": 5,
+          "y": 45,
+          "text": "Goal: tighter tracking under disturbances. Compare maintain-only, reactive and predictive policies.",
+          "size": 12.5
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "level": "implementation",
+      "slug": "02_implementation",
+      "title": "Two experiments, with different prediction engines",
+      "subtitle": "The learned next-state predictor is evaluated separately; action ranking uses simulator rollouts.",
+      "cards": [
+        {
+          "rect": [
+            5,
+            23,
+            22,
+            17
+          ],
+          "eyebrow": "SYNTHETIC GENERATOR",
+          "title": "Shared scenario data",
+          "body": "36 trajectories\n4,138 state transitions\nCalm, crosswind and\nchanging wind/current",
+          "title_size": 14.5
+        },
+        {
+          "rect": [
+            34,
+            17,
+            27,
+            13
+          ],
+          "eyebrow": "NOTEBOOK 01 / PREDICTOR.PY",
+          "title": "Next-position benchmark",
+          "body": "Kinematics + learned x/y residuals\nHistGradientBoostingRegressor\n27 train / 9 test trajectories",
+          "title_size": 13.5,
+          "body_size": 10.5
+        },
+        {
+          "rect": [
+            68,
+            17,
+            27,
+            13
+          ],
+          "eyebrow": "HELD-OUT EVALUATION",
+          "title": "Prediction error",
+          "body": "Two-second next x/y\nPosition RMSE + Euclidean error\nSynthetic results only",
+          "dark": true
+        },
+        {
+          "rect": [
+            34,
+            35,
+            27,
+            13
+          ],
+          "eyebrow": "NOTEBOOK 02 / RECOMMENDER.PY",
+          "title": "Action-ranking experiment",
+          "body": "simulate_step() rolls each action\nSix-step terminal cost ranking\nNo learned-model call here",
+          "title_size": 13.2,
+          "body_size": 10.7
+        },
+        {
+          "rect": [
+            68,
+            35,
+            27,
+            13
+          ],
+          "eyebrow": "FAIR POLICY COMPARISON",
+          "title": "Executed trajectory metrics",
+          "body": "Maintain-only / rule / predictive\nSame start, environment and noise\nCTE, corrections, time to zone",
+          "title_size": 13.2,
+          "body_size": 10.7
+        }
+      ],
+      "edges": [
+        {
+          "points": [
+            [
+              27,
+              31.5
+            ],
+            [
+              30.5,
+              31.5
+            ],
+            [
+              30.5,
+              23.5
+            ],
+            [
+              34,
+              23.5
+            ]
+          ]
+        },
+        {
+          "points": [
+            [
+              30.5,
+              31.5
+            ],
+            [
+              30.5,
+              41.5
+            ],
+            [
+              34,
+              41.5
+            ]
+          ]
+        },
+        {
+          "points": [
+            [
+              61,
+              23.5
+            ],
+            [
+              68,
+              23.5
+            ]
+          ]
+        },
+        {
+          "points": [
+            [
+              61,
+              41.5
+            ],
+            [
+              68,
+              41.5
+            ]
+          ]
+        }
+      ],
+      "evidence": [
+        [
+          "0.0952 m RMSE",
+          "Learned prediction on synthetic test"
+        ],
+        [
+          "1.84 m vs 10.35 m",
+          "Crosswind p95 |CTE|: predictive vs rule"
+        ],
+        [
+          "32 vs 77 corrections",
+          "Crosswind: predictive vs rule"
+        ]
+      ],
+      "footer": "Sources: src/predictor.py; src/recommender.py; src/simulator.py; notebooks/01 and 02."
+    },
+    {
+      "index": 3,
+      "level": "technical",
+      "slug": "03_technical",
+      "title": "Rank six actions through a 12-second look-ahead",
+      "subtitle": "score_action() uses the current environment held fixed across six 2-second simulator steps.",
+      "cards": [
+        {
+          "rect": [
+            5,
+            17,
+            27,
+            13
+          ],
+          "eyebrow": "INPUT CONTRACT",
+          "title": "Observed state + path",
+          "body": "x/y, heading, speed, yaw\nWind/current + previous action\nFixed berth + nominal trajectory"
+        },
+        {
+          "rect": [
+            36.5,
+            17,
+            27,
+            13
+          ],
+          "eyebrow": "CANDIDATE SET",
+          "title": "Six advisory actions",
+          "body": "Maintain · port · starboard\nReduce speed · increase speed\nStabilize"
+        },
+        {
+          "rect": [
+            68,
+            17,
+            27,
+            13
+          ],
+          "eyebrow": "SIMULATOR ROLLOUT",
+          "title": "Forecast terminal state",
+          "body": "simulate_step() × 6 per action\nCompute CTE, heading, speed\nProgress and action-change penalty",
+          "title_size": 14,
+          "body_size": 10.5
+        },
+        {
+          "rect": [
+            5,
+            35,
+            27,
+            13
+          ],
+          "eyebrow": "NEXT ITERATION",
+          "title": "Advance executed state",
+          "body": "Apply lowest-cost action in demo\nAdd shared per-step process noise\nStop at approach-zone radius",
+          "body_size": 10.5
+        },
+        {
+          "rect": [
+            36.5,
+            35,
+            27,
+            13
+          ],
+          "eyebrow": "TRANSPARENT RANKING",
+          "title": "Choose minimum cost",
+          "body": "1.80|CTE| + 0.10|heading error|\n+ 2.20|speed error|\n+ 0.75 lack of progress + change",
+          "body_size": 10.1
+        },
+        {
+          "rect": [
+            68,
+            35,
+            27,
+            13
+          ],
+          "eyebrow": "TERMINAL COST TERMS",
+          "title": "Measure candidate error",
+          "body": "Nearest point on planned path\nDistance reduction toward berth\nPenalize unnecessary switching",
+          "title_size": 14,
+          "body_size": 10.6
+        }
+      ],
+      "edges": [
+        {
+          "points": [
+            [
+              32,
+              23.5
+            ],
+            [
+              36.5,
+              23.5
+            ]
+          ]
+        },
+        {
+          "points": [
+            [
+              63.5,
+              23.5
+            ],
+            [
+              68,
+              23.5
+            ]
+          ]
+        },
+        {
+          "points": [
+            [
+              81.5,
+              30
+            ],
+            [
+              81.5,
+              35
+            ]
+          ]
+        },
+        {
+          "points": [
+            [
+              68,
+              41.5
+            ],
+            [
+              63.5,
+              41.5
+            ]
+          ]
+        },
+        {
+          "points": [
+            [
+              36.5,
+              41.5
+            ],
+            [
+              32,
+              41.5
+            ]
+          ]
+        },
+        {
+          "points": [
+            [
+              18.5,
+              35
+            ],
+            [
+              18.5,
+              30
+            ]
+          ]
+        }
+      ],
+      "evidence": [
+        [
+          "2-second updates",
+          "Implemented simulation timestep"
+        ],
+        [
+          "Seed 84 / noise 10084",
+          "Shared disturbance sequences"
+        ],
+        [
+          "Trade-off, not speed win",
+          "Rule baseline arrives 2–8 s sooner"
+        ]
+      ],
+      "footer": "Source: src/recommender.py. Abstract dynamics and demonstration weights; not certified navigation limits."
+    }
+  ]
+}

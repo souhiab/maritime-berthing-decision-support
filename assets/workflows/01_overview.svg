@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="1152pt" height="720pt" viewBox="0 0 1152 720" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-10-06T17:59:28.973099</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.10.8, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 720 
+L 1152 720 
+L 1152 0 
+L 0 0 
+z
+" style="fill: #fbfaf7"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 278.482852 334.08 
+Q 302.402189 334.08 324.979885 334.08 
+" clip-path="url(#p0485dc162c)" style="fill: none; stroke: #326a9c; stroke-width: 1.2; stroke-linecap: round"/>
+    <path d="M 320.179885 331.68 
+L 324.979885 334.08 
+L 320.179885 336.48 
+z
+" clip-path="url(#p0485dc162c)" style="fill: #326a9c; stroke: #326a9c; stroke-width: 1.2; stroke-linecap: round"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 549.202852 334.08 
+Q 573.122189 334.08 595.699885 334.08 
+" clip-path="url(#p0485dc162c)" style="fill: none; stroke: #326a9c; stroke-width: 1.2; stroke-linecap: round"/>
+    <path d="M 590.899885 331.68 
+L 595.699885 334.08 
+L 590.899885 336.48 
+z
+" clip-path="url(#p0485dc162c)" style="fill: #326a9c; stroke: #326a9c; stroke-width: 1.2; stroke-linecap: round"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 819.922852 334.08 
+Q 843.842189 334.08 866.419885 334.08 
+" clip-path="url(#p0485dc162c)" style="fill: none; stroke: #326a9c; stroke-width: 1.2; stroke-linecap: round"/>
+    <path d="M 861.619885 331.68 
+L 866.419885 334.08 
+L 861.619885 336.48 
+z
+" clip-path="url(#p0485dc162c)" style="fill: #326a9c; stroke: #326a9c; stroke-width: 1.2; stroke-linecap: round"/>
+   </g>
+   <g id="line2d_1">
+    <path d="M 982.08 426.24 
+L 982.08 472.32 
+" clip-path="url(#p0485dc162c)" style="fill: none; stroke: #6c8597; stroke-width: 1.2; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_2">
+    <path d="M 982.08 472.32 
+L 167.04 472.32 
+" clip-path="url(#p0485dc162c)" style="fill: none; stroke: #6c8597; stroke-width: 1.2; stroke-linecap: square"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 167.04 470.320312 
+Q 167.04 449.279658 167.04 429.580644 
+" clip-path="url(#p0485dc162c)" style="fill: none; stroke: #6c8597; stroke-width: 1.2; stroke-linecap: round"/>
+    <path d="M 164.64 434.380644 
+L 167.04 429.580644 
+L 169.44 434.380644 
+z
+" clip-path="url(#p0485dc162c)" style="fill: #6c8597; stroke: #6c8597; stroke-width: 1.2; stroke-linecap: round"/>
+   </g>
+   <g id="line2d_3">
+    <path d="M 57.6 36.288 
+L 92.16 36.288 
+" clip-path="url(#p0485dc162c)" style="fill: none; stroke: #326a9c; stroke-width: 3.5; stroke-linecap: round"/>
+   </g>
+   <g id="line2d_4">
+    <path d="M 57.6 162.432 
+L 1094.4 162.432 
+" clip-path="url(#p0485dc162c)" style="fill: none; stroke: #d9e1e5; stroke-width: 0.8; stroke-linecap: square"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 66.816 241.92 
+L 267.264 241.92 
+Q 276.48 241.92 276.48 251.136 
+L 276.48 417.024 
+Q 276.48 426.24 267.264 426.24 
+L 66.816 426.24 
+Q 57.6 426.24 57.6 417.024 
+L 57.6 251.136 
+Q 57.6 241.92 66.816 241.92 
+z
+" clip-path="url(#p0485dc162c)" style="fill: #ffffff; stroke: #d9e1e5; stroke-width: 1.1; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_7">
+    <path d="M 337.536 241.92 
+L 537.984 241.92 
+Q 547.2 241.92 547.2 251.136 
+L 547.2 417.024 
+Q 547.2 426.24 537.984 426.24 
+L 337.536 426.24 
+Q 328.32 426.24 328.32 417.024 
+L 328.32 251.136 
+Q 328.32 241.92 337.536 241.92 
+z
+" clip-path="url(#p0485dc162c)" style="fill: #ffffff; stroke: #d9e1e5; stroke-width: 1.1; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_8">
+    <path d="M 608.256 241.92 
+L 808.704 241.92 
+Q 817.92 241.92 817.92 251.136 
+L 817.92 417.024 
+Q 817.92 426.24 808.704 426.24 
+L 608.256 426.24 
+Q 599.04 426.24 599.04 417.024 
+L 599.04 251.136 
+Q 599.04 241.92 608.256 241.92 
+z
+" clip-path="url(#p0485dc162c)" style="fill: #ffffff; stroke: #d9e1e5; stroke-width: 1.1; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_9">
+    <path d="M 878.976 241.92 
+L 1085.184 241.92 
+Q 1094.4 241.92 1094.4 251.136 
+L 1094.4 417.024 
+Q 1094.4 426.24 1085.184 426.24 
+L 878.976 426.24 
+Q 869.76 426.24 869.76 417.024 
+L 869.76 251.136 
+Q 869.76 241.92 878.976 241.92 
+z
+" clip-path="url(#p0485dc162c)" style="fill: #152a3b; stroke: #152a3b; stroke-width: 1.1; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_10">
+    <path d="M 66.816 577.152 
+L 1085.184 577.152 
+Q 1094.4 577.152 1094.4 586.368 
+L 1094.4 653.184 
+Q 1094.4 662.4 1085.184 662.4 
+L 66.816 662.4 
+Q 57.6 662.4 57.6 653.184 
+L 57.6 586.368 
+Q 57.6 577.152 66.816 577.152 
+z
+" clip-path="url(#p0485dc162c)" style="fill: #eaf1f7; stroke: #eaf1f7; stroke-width: 1.1; stroke-linejoin: miter"/>
+   </g>
+   <g id="line2d_5">
+    <path d="M 403.2 593.28 
+L 403.2 647.424 
+" clip-path="url(#p0485dc162c)" style="fill: none; stroke: #d9e1e5; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_6">
+    <path d="M 748.8 593.28 
+L 748.8 647.424 
+" clip-path="url(#p0485dc162c)" style="fill: none; stroke: #d9e1e5; stroke-linecap: square"/>
+   </g>
+   <g id="text_1">
+    <text style="font-weight: 700; font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #326a9c" x="103.68" y="38.126438" transform="rotate(-0 103.68 38.126438)">MARITIME BERTHING DECISION SUPPORT</text>
+   </g>
+   <g id="text_2">
+    <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #526574" x="1094.4" y="38.126438" transform="rotate(-0 1094.4 38.126438)">01 / OVERVIEW</text>
+   </g>
+   <g id="text_3">
+    <text style="font-weight: 700; font-size: 29px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #152a3b" x="57.6" y="91.155469" transform="rotate(-0 57.6 91.155469)">Keep an approach trajectory on course</text>
+   </g>
+   <g id="text_4">
+    <text style="font-size: 12px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #526574" x="57.6" y="131.230125" transform="rotate(-0 57.6 131.230125)">One fixed berth, a planned path and changing wind/current; recommend an abstract correction.</text>
+   </g>
+   <g id="text_5">
+    <g id="patch_11">
+     <path d="M 482.813164 471.989219 
+L 669.186836 471.989219 
+L 669.186836 458.805 
+L 482.813164 458.805 
+z
+" style="fill: #fbfaf7"/>
+    </g>
+    <text style="font-size: 9.5px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #526574" x="576" y="468.018516" transform="rotate(-0 576 468.018516)">Updated state feeds the next iteration</text>
+   </g>
+   <g id="text_6">
+    <text style="font-weight: 700; font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #326a9c" x="73.728" y="261.430594" transform="rotate(-0 73.728 261.430594)">01 / OBSERVE</text>
+   </g>
+   <g id="text_7">
+    <text style="font-weight: 700; font-size: 13.8px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #152a3b" x="73.728" y="286.965844" transform="rotate(-0 73.728 286.965844)">State + environment</text>
+   </g>
+   <g id="text_8">
+    <text style="font-size: 10.7px; font-family: 'DejaVu Sans'; fill: #526574" transform="translate(73.728 313.410328)">Position, heading, speed</text>
+    <text style="font-size: 10.7px; font-family: 'DejaVu Sans'; fill: #526574" transform="translate(73.728 327.42457)">Wind and current</text>
+    <text style="font-size: 10.7px; font-family: 'DejaVu Sans'; fill: #526574" transform="translate(73.728 341.438811)">Compare with fixed path</text>
+   </g>
+   <g id="text_9">
+    <text style="font-weight: 700; font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #326a9c" x="344.448" y="261.430594" transform="rotate(-0 344.448 261.430594)">02 / LOOK AHEAD</text>
+   </g>
+   <g id="text_10">
+    <text style="font-weight: 700; font-size: 14px; font-family: 'DejaVu Sans'; fill: #152a3b" transform="translate(344.448 287.117813)">Predict action</text>
+    <text style="font-weight: 700; font-size: 14px; font-family: 'DejaVu Sans'; fill: #152a3b" transform="translate(344.448 305.454203)">consequences</text>
+   </g>
+   <g id="text_11">
+    <text style="font-size: 10.7px; font-family: 'DejaVu Sans'; fill: #526574" transform="translate(344.448 330.690328)">Roll each action through</text>
+    <text style="font-size: 10.7px; font-family: 'DejaVu Sans'; fill: #526574" transform="translate(344.448 344.70457)">6 simulator steps</text>
+    <text style="font-size: 10.7px; font-family: 'DejaVu Sans'; fill: #526574" transform="translate(344.448 358.718811)">2 seconds per step</text>
+   </g>
+   <g id="text_12">
+    <text style="font-weight: 700; font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #326a9c" x="615.168" y="261.430594" transform="rotate(-0 615.168 261.430594)">03 / RANK</text>
+   </g>
+   <g id="text_13">
+    <text style="font-weight: 700; font-size: 12.7px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #152a3b" x="615.168" y="286.130016" transform="rotate(-0 615.168 286.130016)">Recommend correction</text>
+   </g>
+   <g id="text_14">
+    <text style="font-size: 11.3px; font-family: 'DejaVu Sans'; fill: #526574" transform="translate(615.168 313.866234)">Balance path error,</text>
+    <text style="font-size: 11.3px; font-family: 'DejaVu Sans'; fill: #526574" transform="translate(615.168 328.666321)">speed, progress and</text>
+    <text style="font-size: 11.3px; font-family: 'DejaVu Sans'; fill: #526574" transform="translate(615.168 343.466408)">action changes</text>
+   </g>
+   <g id="text_15">
+    <text style="font-weight: 700; font-size: 9px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #b7dee1" x="885.888" y="261.430594" transform="rotate(-0 885.888 261.430594)">04 / REPEAT</text>
+   </g>
+   <g id="text_16">
+    <text style="font-weight: 700; font-size: 13.3px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #ffffff" x="885.888" y="286.585922" transform="rotate(-0 885.888 286.585922)">Advance simulation</text>
+   </g>
+   <g id="text_17">
+    <text style="font-size: 10.3px; font-family: 'DejaVu Sans'; fill: #e0eaee" transform="translate(885.888 313.106391)">Apply chosen action</text>
+    <text style="font-size: 10.3px; font-family: 'DejaVu Sans'; fill: #e0eaee" transform="translate(885.888 326.596735)">Observe the new state</text>
+    <text style="font-size: 10.3px; font-family: 'DejaVu Sans'; fill: #e0eaee" transform="translate(885.888 340.08708)">Repeat until approach zone</text>
+   </g>
+   <g id="text_18">
+    <text style="font-size: 12.5px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #526574" x="57.6" y="527.898047" transform="rotate(-0 57.6 527.898047)">Goal: tighter tracking under disturbances. Compare maintain-only, reactive and predictive policies.</text>
+   </g>
+   <g id="text_19">
+    <text style="font-weight: 700; font-size: 17.5px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #152a3b" x="77.184" y="601.969266" transform="rotate(-0 77.184 601.969266)">Fixed berth</text>
+   </g>
+   <g id="text_20">
+    <text style="font-size: 10.2px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #526574" x="77.184" y="629.830406" transform="rotate(-0 77.184 629.830406)">Trajectory tracking, not berth selection</text>
+   </g>
+   <g id="text_21">
+    <text style="font-weight: 700; font-size: 17.5px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #152a3b" x="422.784" y="601.969266" transform="rotate(-0 422.784 601.969266)">6 actions × 6 steps</text>
+   </g>
+   <g id="text_22">
+    <text style="font-size: 10.2px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #526574" x="422.784" y="629.830406" transform="rotate(-0 422.784 629.830406)">Simulator look-ahead ranks advice</text>
+   </g>
+   <g id="text_23">
+    <text style="font-weight: 700; font-size: 17.5px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #152a3b" x="768.384" y="601.969266" transform="rotate(-0 768.384 601.969266)">Operator authority</text>
+   </g>
+   <g id="text_24">
+    <text style="font-size: 10.2px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #526574" x="768.384" y="629.830406" transform="rotate(-0 768.384 629.830406)">Accept/override in a real deployment</text>
+   </g>
+   <g id="text_25">
+    <text style="font-size: 9.4px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #526574" x="57.6" y="686.822531" transform="rotate(-0 57.6 686.822531)">Synthetic simulation only. The executed loop applies actions automatically for comparison, not real navigation.</text>
+   </g>
+   <g id="text_26">
+    <text style="font-size: 9.4px; font-family: 'DejaVu Sans'; text-anchor: end; fill: #526574" x="1094.4" y="686.822531" transform="rotate(-0 1094.4 686.822531)">MARITIME / 01</text>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p0485dc162c">
+   <rect x="0" y="0" width="1152" height="720"/>
+  </clipPath>
+ </defs>
+</svg>
