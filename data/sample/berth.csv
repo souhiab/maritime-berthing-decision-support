@@ -1,0 +1,2 @@
+berth_id,target_x,target_y,target_heading_deg,approach_zone_radius_m
+BERTH_FIXED_01,0.0,0.0,90.0,45.0
